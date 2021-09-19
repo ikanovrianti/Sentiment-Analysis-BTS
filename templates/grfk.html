@@ -1,0 +1,77 @@
+{% include 'header2.html' %}
+
+{% block body %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container">
+      <div class="row mb-2">
+        <div class="col-sm-12">
+          <h1 align="center" class="m-0"><font color="navy" face="arial">GRAFIK</font></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card card-navy card-outline">
+            <div class="card-body">
+              <br>
+              <h5 align="center" class="m-0"><font color="navy" face="arial" >Nilai Akurasi, Presisi, dan Recall</font></h5>
+              <canvas id="myChart" max-width="50" max-height="50"></canvas>
+              <script>
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Akurasi SVM+QE', 'Akurasi SVM', 'Presisi SVM+QE', 'Presisi SVM', 'Recall SVM+QE', 'Recall SVM', 
+                                 'Akurasi SVM+QE', 'Akurasi SVM', 'Presisi SVM+QE', 'Presisi SVM', 'Recall SVM+QE', 'Recall SVM', 
+                                 'Akurasi SVM+QE', 'Akurasi SVM', 'Presisi SVM+QE', 'Presisi SVM', 'Recall SVM+QE', 'Recall SVM',
+                                 'Akurasi SVM+QE', 'Akurasi SVM', 'Presisi SVM+QE', 'Presisi SVM', 'Recall SVM+QE', 'Recall SVM',
+                                 'Akurasi SVM+QE', 'Akurasi SVM', 'Presisi SVM+QE', 'Presisi SVM', 'Recall SVM+QE', 'Recall SVM'],
+                        datasets: [{
+                            label: ['Nilai'],
+                            data: [0.72, 0.72, 0.77, 0.77, 0.69, 0.46, 
+                                   0.69, 0.69, 0.89, 0.89, 0.59, 0.39,
+                                   0.72, 0.72, 0.79, 0.79, 0.68, 0.45,
+                                   0.74, 0.72, 0.86, 0.52, 0.72, 0.48,
+                                   0.69, 0.69, 0.72, 0.72, 0.62, 0.41], 
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="control-sidebar control-sidebar-dark">
+</aside>
+{% endblock %}

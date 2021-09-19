@@ -1,0 +1,129 @@
+{% include 'header2.html' %}
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col-sm-12">
+            <h1 align="center" class="m-0"><font color="navy face="arial">HASIL KLASIFIKASI DATA UJI </font></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-navy card-outline">
+                <div class="card-body">
+                    <h1 class="card-title"><b>&ensp;Hasil Preprocessing</b></h1><br></br>
+                    {% block body %}
+                    <table>
+                        <tr>
+                            <td small style="font-weight: bold;">Data Awal</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{subject}}</td>
+                        </tr>                 
+                        <tr>
+                            <td small style="font-weight: bold;">Case Folding</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{casefolding}}</td>
+                        </tr>
+                        <tr>
+                          <td small style="font-weight: bold;">Remove Number</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{removenum}}</td>
+                        </tr>
+                        <tr>
+                            <td small style="font-weight: bold;">Remove Punctuation</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{removepunct}}</td>
+                        </tr>
+                        <!-- <tr>
+                            <td small style="font-weight: bold;">Remove Number</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{removenum}}</td>
+                        </tr> -->
+                        <tr>
+                            <td small style="font-weight: bold;">Spelling Correction</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{slangword_}}</td>
+                        </tr>
+                        <tr>
+                          <td small style="font-weight: bold;">Tokenization</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{hasil_token}}</td>
+                        </tr>
+                        <tr>
+                            <td small style="font-weight: bold;">Stopword Removal</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{remove_stop_words}}</td>
+                        </tr>
+                        <tr>
+                            <td small style="font-weight: bold;">Stemming</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{stemming_}}</td>
+                        </tr>
+                        <tr>
+                          <td small style="font-weight: bold;">Query Expansion</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{qe_}}</td>
+                        </tr>
+                        <tr>
+                            <td small style="font-weight: bold;">Hasil Preprocessing</td>
+                            <td small style="font-weight: bold;">&ensp;:</td>
+                            <td>&ensp;{{text_final_}}</td>
+                        </tr>
+                    </table>
+                    <br><h1 class="card-title"><b>&ensp;Hasil Klasifikasi SVM + QE</b></h1><br></br>
+                    <table>
+                        <!-- <tr>
+                          <td small style="font-weight: bold;">Nilai Sentimen</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{hasil_kelas}}</td>
+                        </tr> -->
+                        <!-- <tr>
+                          <td small style="font-weight: bold;">Shape</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{shape}}</td>
+                        </tr> -->
+                        <!-- <tr>
+                          <td small style="font-weight: bold;">TF-IDF</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{vect}}</td>
+                        </tr> -->
+              
+                        <tr>
+                          <td small style="font-weight: bold;">Kelas dan Probabiltas Sentimen</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{probabilitassvmm}}</td>
+                      </tr>
+                    </table>
+                    <br><h1 class="card-title"><b>&ensp;Hasil Klasifikasi SVM</b></h1><br></br>
+                    <table>
+                        <!-- <tr>
+                          <td small style="font-weight: bold;">Kelas dan Probabiltas Sentimen</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{hasil_kelas_nonqe}}</td>
+                        </tr> -->
+                        <tr>
+                          <td small style="font-weight: bold;">Kelas dan Probabiltas Sentimen</td>
+                          <td small style="font-weight: bold;">&ensp;:</td>
+                          <td>&ensp;{{probabilitassvmnonqe_}}</td>
+                        </tr>
+                    </table>
+                    {% endblock %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="control-sidebar control-sidebar-dark">
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  
+  {% include 'footer2.html' %}
