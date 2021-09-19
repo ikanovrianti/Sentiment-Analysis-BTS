@@ -1,0 +1,92 @@
+{% include 'header2.html' %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-8">
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="info-box">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-smile"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Positif</span>
+              <span class="info-box-number">329</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-angry"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Negatif</span>
+              <span class="info-box-number">100</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-meh"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Netral</span>
+              <span class="info-box-number">71</span>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix hidden-md-up"></div>
+      </div>
+    </div>
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-navy card-outline">
+                <div class="card-body">
+                  <h1 class="card-title"><b>Dataset</b></h1>
+                  <p class="card-text">
+                    Data komentar ini berasal dari postingan instagram milik Tokopedia yang berkaitan dengan
+                    BTS. Kemudian dilakukan pelabelan pada komentar secara manual.
+                  </p>
+                  <div class="card-footer clearfix">
+                    <table class="table table-bordered" style="table-layout: fixed;">
+                      <thead>
+                        <tr>
+                          <th style="width: 10%;">No.</th>
+                          <th style="width: 78%;">Komentar</th>
+                          <th style="width: 36%;">Sentimen</th>
+                          <th style="width: 13%;">Label</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for dataset in dataset %}
+                        <tr>
+                          <td>{{ loop.index }}</td>
+                          <td>{{ dataset.komentar }}</td>
+                          <td>{{ dataset.sentimen }}</td>
+                          <td>{{ dataset.label }}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<aside class="control-sidebar control-sidebar-dark">
+</aside>
+{% include 'footer2.html' %}

@@ -1,0 +1,104 @@
+{% include 'header2.html' %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-8">
+      </div>
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="info-box">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-smile"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Positif</span>
+              <span class="info-box-number">329</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-angry"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Negatif</span>
+              <span class="info-box-number">100</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-meh"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Netral</span>
+              <span class="info-box-number">71</span>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix hidden-md-up"></div>
+      </div>
+    </div>
+    <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card card-green card-outline">
+                <div class="card-body">
+                  <h1 class="card-title"><b>Dataset</b></h1>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                  </p>
+                  <div class="card-footer clearfix">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">No.</th>
+                          <th>Komentar</th>
+                          <th>Sentimen</th>
+                          <th>Label</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for dataset in dataset %}
+                        <tr>
+                          <td>{{ loop.index }}</td>
+                          <td>{{ dataset.komentar }}</td>
+                          <td>{{ dataset.sentimen }}</td>
+                          <td>{{ dataset.label }}</td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- <div class="card-footer clearfix">
+                    <ul class="pagination pagination-sm m-0 float-right">
+                      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<aside class="control-sidebar control-sidebar-dark">
+</aside>
+{% include 'footer2.html' %}
