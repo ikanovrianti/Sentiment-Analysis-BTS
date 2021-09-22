@@ -24,7 +24,7 @@ Proses ini akan membersihkan data yang telah dilakukan pelabelan. _Text preproce
 #### 4. _Query Expansion_
 Metode ini digunakan untuk melakukan perluasan pada _term_ / kata pada data komentar. Tujuannya yaitu agar kata yang awalnya tidak terdapat pada data uji atau bernilai 0 kemudian dilakukan _query expansion_, maka kata tersebut menjadi bernilai 1 sesuai dengan kata yang terdapat pada data latih.
 
-#### 5. Pemobotan TF-IDF
+#### 5. Pembobotan TF-IDF
 Proses ini akan melakukan perhitungan pada tiap kata yang terdapat pada data set. Kemudian tiap kata tersebut akan dinotasikan ke dalam bentuk _vector_ mengingat metode _support vector machine_ memproses data berupa angka.
 
 #### 6. _Support Vector Machine_
