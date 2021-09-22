@@ -30,7 +30,7 @@ Proses ini akan melakukan perhitungan pada tiap kata yang terdapat pada data set
 #### 6. _Support Vector Machine_
 Metode SVM merupakan salah metode yang digunakan dalam melakukan klasifikasi. Beberapa jurnal membuktikan bahwa metode ini cocok untuk melakukan klasifikasi pada data berupa teks. Dalam melakukan klasifikasi metode ini akan mencari nilai _hyperplane_ terbaik yang mendekati nilai kebenaran dari sentimen. Output dari klasifikasi ini yaitu berupa nilai sentimen (positif, negatif, netral) beserta dengan probabilitas dari masing-masing sentimen. Akurasi yang dihasilkan dari project ini yaitu sebesar 74% pada saat pengujian menggunakan metode SVM dan QE, lalu akurasi sebesar 72% pada saat pengujian menggunakan metode SVM tanpa QE. 
 
-Untuk sistem yang dibuat untuk project ini dapat dilihat pada gambar-gambar berikut :
+Untuk sistem yang dibuat pada project ini dapat dilihat pada gambar-gambar berikut :
 
 #### 1. Halaman Utama
 Halaman ini menampilkan gambaran dari project yang dilakukan.
